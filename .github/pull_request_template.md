@@ -1,23 +1,18 @@
 # 🚀 Pull Request
 
 ## 🔧 Summary
-
 <!-- Concise description of what this PR does -->
 
 ## 🔗 ClickUp Task
-
 - Task ID: [CL-123](https://app.clickup.com/t/CL-123)
 
 ## 🧭 Merges Into
-
 - Base branch: `develop` / `main` / `release/*`
 
 ## 📂 Branch Naming
-
-✅ Format:
-
-- `feature/CL-123-description`
-- `bugfix/CL-456-description`
+✅ Format:  
+- `feature/CL-123-description`  
+- `bugfix/CL-456-description`  
 - `hotfix/CL-789-description`
 
 > This PR was created from: `branch_name`
@@ -65,11 +60,15 @@
 
 ## 🧩 Related Work
 
-- Related PRs: #
-- Blockers / Dependencies: #
+* Related PRs: #
+* Blockers / Dependencies: #
 
 ---
 
 ## 🧠 Notes
 
+
 ---
+
+
+
