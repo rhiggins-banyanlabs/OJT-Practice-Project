@@ -74,7 +74,7 @@ const FeatureSection: React.FC = () => {
 
             <p className="text-sm text-gray-600 mb-3">{feature.description}</p>
 
-            <div className="w-full mb-4">
+            <div className="mb-4">
               <p className="text-sm font-medium text-gray-700 mb-1">Available Colors:</p>
               <div className="flex flex-wrap gap-2">
                 {feature.colors.map((color, idx) => (
@@ -101,4 +101,5 @@ const FeatureSection: React.FC = () => {
 };
 
 export default FeatureSection;
+
 
