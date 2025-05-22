@@ -67,7 +67,7 @@ const FeatureSection: React.FC = () => {
             />
 
             <div className="flex justify-between items-center w-full mb-1">
-              <h3 className="text-lg font-semibold text-gray-800">{feature.title}</h3>
+              
               <span className="text-teal-600 font-semibold">{feature.price}</span>
             </div>
 
@@ -87,8 +87,8 @@ const FeatureSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-auto w-full flex justify-center">
-              <Button className="w-full bg-emerald-600 text-white hover:bg-emerald-700 text-sm px-6 py-2 rounded">
+            <div className="w-full flex justify-center">
+              <Button className="w-full sm:w-auto bg-emerald-600 text-white hover:bg-emerald-700 text-sm px-6 py-2 rounded">
                 Add to Cart
               </Button>
             </div>
