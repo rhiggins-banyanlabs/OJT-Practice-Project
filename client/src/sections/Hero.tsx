@@ -1,7 +1,7 @@
-import React from "react";
 import Header from '../components/ui/Heading.tsx';
 import Paragraph from '../components/ui/Paragraph.tsx';
 import Button from '../components/ui/Button.tsx';
+import imageS from '../assets/Images/imageS.png'
 
 const Card = () => {
   return (
@@ -33,7 +33,7 @@ const Card = () => {
 
       {/* Right: Image */}
       <div className="flex-1">
-        <img src="/image.png" alt="Shoe Collection" className="w-full h-auto object-contain" />
+        <img src={imageS} alt="Shoe Collection" className="w-full h-auto object-contain" />
       </div>
     </div>
   );
