@@ -61,11 +61,17 @@ const FeatureSection: React.FC = () => {
             title={feature.title}
             className="p-6 bg-white rounded-lg shadow-md flex flex-col items-center"
           >
-            <img src={feature.image} alt={feature.title} className="w-full h-40 object-contain mb-4" />
-            <div className="flex justify-between items-center w-full mb-2">
-              <h3 className="text-lg font-semibold text-gray-800">{feature.title}</h3>
+            <img
+              src={feature.image}
+              alt={feature.title}
+              className="w-full h-[160px] object-contain mb-4"
+            />
+
+            <div className="flex justify-between items-center w-full mb-1">
+              
               <span className="text-teal-600 font-semibold">{feature.price}</span>
             </div>
+
             <p className="text-sm text-gray-600 mb-3">{feature.description}</p>
 
             <div className="w-full mb-4">
@@ -82,7 +88,11 @@ const FeatureSection: React.FC = () => {
               </div>
             </div>
 
-            <Button className="w-full bg-emerald-600 text-white hover:bg-emerald-700">Add to Cart</Button>
+            <div className="w-full flex justify-center">
+              <Button className="w-full sm:w-auto bg-emerald-600 text-white hover:bg-emerald-700 text-sm px-6 py-2 rounded">
+                Add to Cart
+              </Button>
+            </div>
           </Card>
         ))}
       </div>
@@ -91,4 +101,5 @@ const FeatureSection: React.FC = () => {
 };
 
 export default FeatureSection;
+
 
