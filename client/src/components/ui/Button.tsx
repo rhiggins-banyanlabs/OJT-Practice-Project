@@ -27,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
   if (variant === "primary") {
     variantClass = "bg-[#0D9488] text-white hover:bg-[#0C827A]";
   } else if (variant === "link") {
-    variantClass = "text-[#0D9488] hover:text-[#0C827A] underline bg-transparent px-0 py-0";
+    variantClass = "text-[#0D9488] hover:text-[#0C827A] hover:underline bg-transparent px-0 py-0";
   }
 
   const allClasses = `${baseClasses} ${sizeClass} ${variantClass} ${className}`.trim();
