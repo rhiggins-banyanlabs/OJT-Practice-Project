@@ -102,4 +102,3 @@ const FeatureSection: React.FC = () => {
 
 export default FeatureSection;
 
-
