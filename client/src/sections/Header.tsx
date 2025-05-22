@@ -1,27 +1,25 @@
 import React, { useState } from "react";
-import Button from "../components/ui/Button";
+import Button from "./Button";
 import { Menu, X } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-
   const navLinks = [
-    { label: "About", href: "#hero" },
-    { label: "Product", href: "#features" },
-    { label: "Contact", href: "#footer" },
-    { label: "Sign Up", href: "#footer" },
+    { label: "About", href: "#hero", highlight: false },
+    { label: "Product", href: "#features", highlight: false },
+    { label: "Contact", href: "#footer", highlight: false },
+    { label: "Sign In", href: "#footer", highlight: true },
   ];
 
   return (
-    <header className="w-full border-b shadow-sm bg-white fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="w-full bg-white border-b shadow-sm fixed top-0 z-50 font-inter">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-[#0D9488] text-lg font-medium font-inter">MyLogo</div>
+        <div className="text-[#1E293B] text-xl font-bold">ShoeStyle</div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-6 items-center">
+        <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -31,7 +29,9 @@ const Header: React.FC = () => {
               <Button
                 variant="link"
                 size="md"
-                className="text-[#64748B] hover:underline hover:text-[#0D9488]"
+                className={`${
+                  link.highlight ? "text-[#0D9488]" : "text-[#64748B]"
+                } hover:underline hover:text-[#0D9488]`}
               >
                 {link.label}
               </Button>
@@ -39,10 +39,10 @@ const Header: React.FC = () => {
           ))}
         </nav>
 
-        {/* Hamburger Toggle */}
+        {/* Hamburger for Mobile */}
         <button
           className="md:hidden text-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#0D9488]"
-          onClick={toggleMenu}
+          onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -62,7 +62,9 @@ const Header: React.FC = () => {
                 <Button
                   variant="link"
                   size="md"
-                  className="text-[#64748B] hover:underline hover:text-[#0D9488] text-left w-full"
+                  className={`${
+                    link.highlight ? "text-[#0D9488]" : "text-[#64748B]"
+                  } hover:underline hover:text-[#0D9488] text-left w-full`}
                 >
                   {link.label}
                 </Button>
