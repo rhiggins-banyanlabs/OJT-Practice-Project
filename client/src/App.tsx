@@ -1,7 +1,7 @@
 import Header from './sections/Header';
 import Hero from './sections/Hero';
 import Features from './sections/Features';
-import Footer from './sections/Footer';
+// import Footer from './sections/Footer';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <main className="pt-[80px]"> {/* to prevent content under fixed header */}
         <Hero />
         <Features />
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );
