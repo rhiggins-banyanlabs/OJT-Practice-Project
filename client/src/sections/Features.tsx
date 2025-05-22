@@ -58,7 +58,7 @@ const FeatureSection: React.FC = () => {
         {features.map((feature, index) => (
           <Card
             key={index}
-            title={feature.title}
+            title=""
             className="p-6 bg-white rounded-lg shadow-md flex flex-col items-center"
           >
             <img
