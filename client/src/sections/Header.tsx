@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "./Button";
+import Button from "../components/ui/Button";
 import { Menu, X } from "lucide-react";
 
 const Header: React.FC = () => {
