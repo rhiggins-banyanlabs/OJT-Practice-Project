@@ -24,15 +24,8 @@ const Footer: React.FC = () => {
               key={link.label}
               href={link.href}
               className="hover:text-[#0D9488] transition-colors focus:outline-none focus:ring-2 focus:ring-[#0D9488]"
-            >
-              <Button
-                  variant="link"
-                  size="md"
-                  className={`${
-                    link.highlight ? "text-[#0D9488]" : "text-[#64748B]"
-                  } hover:underline hover:text-[#0D9488] text-left w-full`}
-                >  
-              {link.label}</Button>
+            >  
+              {link.label}
             </a>
           ))}
         </nav>
