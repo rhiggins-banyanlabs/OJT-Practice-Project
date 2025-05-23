@@ -76,59 +76,63 @@ const FeatureSection: React.FC = () => {
     <section id="features" className="bg-gray-50 py-12 px-4 sm:px-8 lg:px-16">
       <div className="text-center mb-10">
         <Heading level="h2">Our Collection</Heading>
-        <h2 className="text-gray-600 mt-2">
+        <Heading level="h3" className="mt-2">
           Discover our latest shoes designed for style, comfort, and durability.
-        </h2>
+        </Heading>
       </div>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature, index) => (
-          <Card
-            key={index}
-            title=""
-            className="p-6 bg-white rounded-lg shadow-md flex flex-col items-stretch h-full"
-          >
-            <img
-              src={feature.image}
-              alt={feature.title}
-              className="w-full h-[160px] object-contain mb-4"
-            />
+        <Card
+  key={index}
+  title=""
+  className="relative p-6 bg-white rounded-lg shadow-md flex flex-col h-full"
+>
+  <img
+    src={feature.image}
+    alt={feature.title}
+    className="w-full h-[300px] object-contain mb-4"
+  />
 
-            <div className="flex justify-between items-center w-full mb-2">
-              <h3 className="text-base font-bold text-gray-800">{feature.title}</h3>
-              <span className="text-teal-600 font-semibold">{feature.price}</span>
-            </div>
+  <div className="flex justify-between items-center w-full mb-2">
+    <Heading level="h3">{feature.title}</Heading>
+    <span className="text-teal-600 font-bold text-xl">{feature.price}</span>
+  </div>
 
-            <Paragraph className="text-md text-gray-600 mb-3">{feature.description}</Paragraph>
+  <Paragraph className="text-md text-gray-600 mb-3">{feature.description}</Paragraph>
 
-            <div className="mb-4">
-              <Paragraph className="text-sm font-medium text-gray-700 mb-1">Available Colors:</Paragraph>
-              <div className="flex flex-wrap gap-2">
-                {feature.colors.map((color, idx) => (
-                  <span
-                    key={idx}
-                    onClick={() => handleColorSelect(index, color)}
-                    className={`text-xs font-semibold px-2 py-1 rounded-full cursor-pointer transition ${
-                      selectedColors[index] === color
-                        ? "bg-teal-600 text-white"
-                        : "bg-gray-200 text-gray-700"
-                    }`}
-                  >
-                    {color}
-                  </span>
-                ))}
-              </div>
-            </div>
+  <div className="mb-4">
+    <Paragraph className="text-sm font-medium text-gray-700 mb-1">Available Colors:</Paragraph>
+    <div className="flex flex-wrap gap-2">
+      {feature.colors.map((color, idx) => (
+        <span
+          key={idx}
+          onClick={() => handleColorSelect(index, color)}
+          className={`text-xs font-semibold px-2 py-1 rounded-full cursor-pointer transition ${
+            selectedColors[index] === color
+              ? "bg-teal-600 text-white"
+              : "bg-gray-200 text-gray-700"
+          }`}
+        >
+          {color}
+        </span>
+      ))}
+    </div>
+  </div>
 
-            <div className="mt-auto w-full flex justify-center">
-              <Button
-                onClick={() => handleAddToCart(index)}
-                className="mt-fix bg-emerald-600 text-white hover:bg-emerald-700 text-sm px-6 py-2 rounded cursor-pointer"
-              >
-                Add to Cart
-              </Button>
-            </div>
-          </Card>
+  {/* Spacer to ensure content above doesn't overlap button */}
+  <div className="h-12" />
+
+  <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+    <Button
+      onClick={() => handleAddToCart(index)}
+      className="w-4/5 bg-emerald-600 text-white hover:bg-emerald-700 text-sm px-6 py-2 rounded cursor-pointer"
+    >
+      Add to Cart
+    </Button>
+  </div>
+</Card>
+
         ))}
       </div>
     </section>
