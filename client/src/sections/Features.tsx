@@ -80,8 +80,8 @@ const FeatureSection: React.FC = () => {
           Discover our latest shoes designed for style, comfort, and durability.
         </Heading>
       </div>
-{/* change this back remove auto to fr */}
-      <div className="!grid gap-8 sm:grid-cols-2 lg:grid-cols-4 auto-rows-fr">
+      
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 ">
         {features.map((feature, index) => (
         <Card
   key={index}
