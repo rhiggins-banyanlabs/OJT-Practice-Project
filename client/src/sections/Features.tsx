@@ -57,23 +57,36 @@ const FeatureSection: React.FC = () => {
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature, index) => (
           <Card
-            key={index}
-            title=""
-            className="p-6 bg-white rounded-lg shadow-md flex flex-col items-center"
-          >
-            <img
-              src={feature.image}
-              alt={feature.title}
-              className="w-full h-[160px] object-contain mb-4"
-            />
+             key={index}
+  title=""
+  className="p-6 bg-white rounded-lg shadow-md flex flex-col items-stretch h-full"
+>
+  <img
+    src={feature.image}
+    alt={feature.title}
+    className="w-full h-[160px] object-contain mb-4"
+  />
 
-            <div className="flex justify-between items-center w-full mb-1">
-              
-              <span className="text-teal-600 font-semibold">{feature.price}</span>
-            </div>
+  <div className="flex justify-between items-center w-full mb-2">
+    <h3 className="text-base font-semibold text-gray-800">{feature.title}</h3>
+    <span className="text-teal-600 font-semibold">{feature.price}</span>
+  </div>
 
-            <p className="text-sm text-gray-600 mb-3">{feature.description}</p>
+  <p className="text-sm text-gray-600 mb-3">{feature.description}</p>
 
+  <div className="mb-4">
+    <p className="text-sm font-medium text-gray-700 mb-1">Available Colors:</p>
+    <div className="flex flex-wrap gap-2">
+      {feature.colors.map((color, idx) => (
+        <span
+          key={idx}
+          className="bg-gray-200 text-gray-700 text-xs font-semibold px-2 py-1 rounded-full"
+        >
+          {color}
+        </span>
+      ))}
+    </div>
+  </div>
             <div className="mb-4">
               <p className="text-sm font-medium text-gray-700 mb-1">Available Colors:</p>
               <div className="flex flex-wrap gap-2">
@@ -88,11 +101,14 @@ const FeatureSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="w-full flex justify-center">
-              <Button className="w-full sm:w-auto bg-emerald-600 text-white hover:bg-emerald-700 text-sm px-6 py-2 rounded">
-                Add to Cart
-              </Button>
-            </div>
+  {/* This spacer will push the button to the bottom */}
+  <div className="flex-grow" />
+
+  <div className="w-full flex justify-center mt-4">
+    <Button className="w-full sm:w-auto bg-emerald-600 text-white hover:bg-emerald-700 text-sm px-6 py-2 rounded">
+      Add to Cart
+    </Button>
+  </div>
           </Card>
         ))}
       </div>
