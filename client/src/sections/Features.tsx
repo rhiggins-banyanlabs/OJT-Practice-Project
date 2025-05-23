@@ -87,6 +87,19 @@ const FeatureSection: React.FC = () => {
       ))}
     </div>
   </div>
+            <div className="mb-4">
+              <p className="text-sm font-medium text-gray-700 mb-1">Available Colors:</p>
+              <div className="flex flex-wrap gap-2">
+                {feature.colors.map((color, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-gray-200 text-gray-700 text-xs font-semibold px-2 py-1 rounded-full"
+                  >
+                    {color}
+                  </span>
+                ))}
+              </div>
+            </div>
 
   {/* This spacer will push the button to the bottom */}
   <div className="flex-grow" />
