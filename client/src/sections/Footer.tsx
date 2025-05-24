@@ -5,8 +5,8 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="footer" className="bg-[#F8FAFC] text-[#64748B] font-inter px-4 md:px-8 py-8 text-sm md:text-base">
-      <div className="max-w-7xl mx-auto flex flex-col gap-6">
+    <footer id="footer" className="w-full bg-[#F8FAFC] text-[#64748B] font-inter px-4 md:px-8 py-8 text-sm md:text-base">
+      <div className="w-full mx-auto flex flex-col gap-6">
         {/* Top Section: Logo and Nav */}
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
           {/* Logo */}
