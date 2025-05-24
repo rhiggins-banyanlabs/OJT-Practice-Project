@@ -5,7 +5,7 @@ import imageS from '../assets/Images/imageS.png'
 
 const Card = () => {
   return (
-    <div className="flex items-center justify-between gap-8 p-4">
+    <div id="hero" className="flex items-center justify-between gap-8 p-4">
       {/* Left: Text content */}
       <div className="flex-1">
         <Header
