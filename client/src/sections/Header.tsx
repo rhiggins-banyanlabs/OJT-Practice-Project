@@ -31,7 +31,7 @@ const Header: React.FC = () => {
                 size="md"
                 className={`${
                   link.highlight ? "text-[#0D9488]" : "text-[#64748B]"
-                } hover:underline hover:text-[#0D9488]`}
+                } hover:underline hover:text-[#0D9488] cursor-pointer`}
               >
                 {link.label}
               </Button>
