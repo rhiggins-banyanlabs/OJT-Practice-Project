@@ -1,7 +1,7 @@
 import React from "react";
 
 type ButtonVariant = "primary" | "link";
-type ButtonSize = "sm" | "md" | "lg";
+type ButtonSize = "md" | "lg" | "xl";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -19,9 +19,9 @@ const Button: React.FC<ButtonProps> = ({
   const baseClasses = "rounded-lg font-medium font-inter transition-colors duration-200";
 
   let sizeClass = "";
-  if (size === "sm") sizeClass = "text-sm py-2 px-4";
-  else if (size === "md") sizeClass = "text-base py-3 px-5";
-  else if (size === "lg") sizeClass = "text-base py-4 px-6";
+  if (size === "md") sizeClass = "text-lg py-3 px-5";
+  else if (size === "lg") sizeClass = "text-base py-5 px-6";
+  else if (size === "xl") sizeClass = "text-base py-6 px-8";
 
   let variantClass = "";
   if (variant === "primary") {

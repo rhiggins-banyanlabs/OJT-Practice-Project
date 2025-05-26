@@ -91,7 +91,7 @@ const FeatureSection: React.FC = () => {
   <img
     src={feature.image}
     alt={feature.title}
-    className="w-full h-[300px] object-contain mb-4"
+    className="w-full h-[350px] object-contain mb-4"
   />
 
   <div className="flex justify-between items-center w-full mb-2">
@@ -126,7 +126,7 @@ const FeatureSection: React.FC = () => {
   <div className="absolute bottom-4 left-0 right-0 flex justify-center">
     <Button
       onClick={() => handleAddToCart(index)}
-      className="w-4/5 bg-emerald-600 text-white hover:bg-emerald-700 text-sm px-6 py-2 rounded cursor-pointer"
+      className="w-4/5 rounded cursor-pointer"
     >
       Add to Cart
     </Button>

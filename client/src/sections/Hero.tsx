@@ -17,7 +17,7 @@ const Hero = () => {
           and style. Crafted with the finest materials and attention to detail.
         </Header>
         <br />
-        <div className="flex justify-center md:justify-start mt-4">
+        <div className="flex justify-center md:justify-start mt-4 mb-8">
           <Button className="cursor-pointer">Shop Collection</Button>
           <Button variant="link" className="cursor-pointer ml-4">
             Learn More
@@ -26,7 +26,7 @@ const Hero = () => {
       </div>
 
       {/* Right: Image */}
-      <div className="flex justify-center md:justify-end flex-1">
+      <div className="flex justify-center md:justify-end flex-1 mt-6 md:mt-0">
         <img
           src={imageS}
           alt="Shoe Collection"
