@@ -81,7 +81,7 @@ const FeatureSection: React.FC = () => {
         </Heading>
       </div>
       
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 ">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 w-[98%] mx-auto mb-[4rem]">
         {features.map((feature, index) => (
         <Card
   key={index}
