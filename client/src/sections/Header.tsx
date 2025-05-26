@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../components/ui/Button";
 import { Menu, X } from "lucide-react";
+import Heading from "../components/ui/Heading";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,13 +14,17 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="w-full bg-white border-b shadow-sm fixed top-0 z-50 font-inter">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <header className="w-full bg-white border-b border-gray-200 shadow-sm fixed top-0 z-50 font-inter">
+      <div className="w-full px-4 py-4 flex items-center">
         {/* Logo */}
-        <div className="text-[#1E293B] text-xl font-bold">ShoeStyle</div>
+        <a href="/" className="focus:outline-none focus:ring-2 focus:ring-[#0D9488]">
+          <Heading level="h2" className="text-[#1E293B] text-xl font-bold">
+          ShoeStyle
+          </Heading>
+        </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-6 ml-auto">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -31,7 +36,7 @@ const Header: React.FC = () => {
                 size="md"
                 className={`${
                   link.highlight ? "text-[#0D9488]" : "text-[#64748B]"
-                } hover:underline hover:text-[#0D9488]`}
+                } hover:underline hover:text-[#0D9488] cursor-pointer`}
               >
                 {link.label}
               </Button>

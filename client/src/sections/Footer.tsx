@@ -1,46 +1,39 @@
 import React from "react";
-import Button from "../components/ui/Button";
+import Heading from "../components/ui/Heading";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const navLinks = [
-    { label: "About", href: "#hero" },
-    { label: "Products", href: "#features" },
-    { label: "Contact", href: "#footer" },
-    { label: "Support", href: "#support" },
-  ];
-
   return (
-    <footer className="bg-[#F8FAFC] text-[#64748B] font-inter text-sm md:text-base py-8 px-4 md:px-8 border-t">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:justify-between gap-6 md:gap-0">
-        {/* Logo */}
-        <div className="text-[#1E293B] text-lg font-semibold">ShoeStyle</div>
+    <footer id="footer" className="w-full bg-[#F8FAFC] text-[#64748B] font-inter px-4 md:px-8 py-8 text-sm md:text-base">
+      <div className="w-full mx-auto flex flex-col gap-6">
+        {/* Top Section: Logo and Nav */}
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
+          {/* Logo */}
+          <Heading level="h3" className="text-[#1E293B] text-lg font-semibold">ShoeStyle</Heading>
 
-        {/* Navigation Links */}
-        <nav className="flex flex-col md:flex-row gap-4 md:gap-6 items-center">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="hover:text-[#0D9488] transition-colors focus:outline-none focus:ring-2 focus:ring-[#0D9488]"
-            >  
-            <Button
-                  variant="link"
-                  size="md"
-                  className={`${
-                    link ? "text-[#0D9488]" : "text-[#64748B]"
-                  } hover:underline hover:text-[#0D9488] text-left w-full`}
-                >
-              {link.label}</Button>
-            </a>
-          ))}
-        </nav>
-      </div>
+          {/* Nav Links */}
+          <nav className="flex flex-col md:flex-row gap-2 md:gap-6">
+            <a href="#hero" className="hover:text-[#0D9488]">About</a>
+            <a href="#features" className="hover:text-[#0D9488]">Products</a>
+            <a href="#footer" className="hover:text-[#0D9488]">Contact</a>
+            <a href="#support" className="hover:text-[#0D9488]">Support</a>
+          </nav>
+        </div>
 
-      {/* Bottom Section */}
-      <div className="mt-6 text-center text-xs text-[#94A3B8]">
-        &copy; {currentYear} ShoeStyle. All rights reserved.
+        {/* Divider */}
+        <hr className="border-t border-gray-200" />
+
+        {/* Bottom Section: Copyright & Legal */}
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
+          <p className="text-xs md:text-sm text-[#94A3B8]">
+            &copy; {currentYear} ShoeStyle. All rights reserved.
+          </p>
+          <div className="flex gap-4 text-xs md:text-sm">
+            <a href="#privacy" className="hover:text-[#0D9488]">Privacy</a>
+            <a href="#terms" className="hover:text-[#0D9488]">Terms</a>
+          </div>
+        </div>
       </div>
     </footer>
   );
