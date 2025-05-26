@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="pt-[8rem]">
+      <main className="pt-[4rem]">
         <Hero />
         <Features />
         <Footer />
