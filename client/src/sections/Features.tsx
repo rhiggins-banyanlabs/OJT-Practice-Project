@@ -73,7 +73,7 @@ const FeatureSection: React.FC = () => {
   };
 
   return (
-    <section id="features" className="bg-gray-50 py-12 px-4 sm:px-8 lg:px-16">
+    <section id="features" className="bg-gray-50 py-2 px-4 sm:px-8 lg:px-16">
       <div className="text-center mb-10">
         <Heading level="h2">Our Collection</Heading>
         <Heading level="h3" className="mt-2">

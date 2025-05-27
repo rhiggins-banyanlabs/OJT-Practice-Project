@@ -9,8 +9,8 @@ interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
 }
 
 const headerStyles: Record<HeaderLevel, string> = {
-  h1: "text-4xl sm:text-6xl font-bold leading-tight text-slate-800",   // 48px desktop / 32px mobile
-  h2: "text-3xl sm:text-5xl font-bold leading-snug text-slate-800",    // 36px / 28px
+  h1: "text-4xl sm:text-5xl font-bold leading-tight text-slate-800",   // 48px desktop / 32px mobile
+  h2: "text-3xl sm:text-4xl font-bold leading-snug text-slate-800",    // 36px / 28px
   h3: "text-xl sm:text-3xl font-semibold leading-relaxed text-slate-800", // 24px / 20px
   h4: "text-lg sm:text-xl font-semibold leading-loose text-slate-800",   // 20px / 18px
 };

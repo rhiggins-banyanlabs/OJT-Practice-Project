@@ -18,7 +18,7 @@ const Header: React.FC = () => {
       <div className="w-[95%] mx-auto px-4 py-4 flex items-center">
         {/* Logo */}
         <a href="/" className="focus:outline-none focus:ring-2 focus:ring-[#0D9488]">
-          <Heading level="h2" className="text-[#1E293B] text-xl font-bold">
+          <Heading level="h3" className="text-[#1E293B] text-xl !font-bold">
           ShoeStyle
           </Heading>
         </a>
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
               >
                 <Button
                   variant="link"
-                  size="md"
+                  size="sm"
                   className={`${
                     link.highlight ? "text-[#0D9488]" : "text-[#64748B]"
                   } hover:underline hover:text-[#0D9488] text-left w-full`}
