@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       id="footer"
       className="w-full bg-[#F8FAFC] text-[#64748B] font-inter px-4 md:px-8 py-8 text-sm md:text-base border-t border-gray-300"
 style={{ boxShadow: "0 -4px 12px -3px rgba(0, 0, 0, 0.15)" }}    >
-      <div className="w-[95%] mx-auto flex flex-col gap-6">
+      <div className="w-[95%] mx-auto flex flex-col gap-4">
         {/* Top Section: Logo and Nav */}
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
           {/* Logo */}

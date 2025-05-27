@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="flex-1 text-center md:text-left">
         <Header level="h1">Step Into Comfort & Style</Header>
         <br />
-        <Header level="h3">
+        <Header level="h4">
           Discover our new collection of premium shoes designed for both comfort
           and style. Crafted with the finest materials and attention to detail.
         </Header>
